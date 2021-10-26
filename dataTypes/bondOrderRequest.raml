@@ -1,0 +1,26 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  bondid:
+    displayName: Bond Id
+    description: The bond product id
+    type: string
+    example: "a02f4000007qMKvAAM"
+  quantity:
+    displayName: Quantity
+    description: The amount of bonds in the order
+    type: number
+    example: 10
+  orderType:
+    displayName: Order type
+    description: The type of the order
+    type: string
+    enum:
+      - BUY
+      - SELL
+    example: BUY
+  accountID:
+    displayName: Account  ID
+    description: The client account buying the bond
+    type: string
+    example: "0015G00001pIFRWQA4"

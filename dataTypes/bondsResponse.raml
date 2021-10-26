@@ -1,0 +1,84 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  bonds:
+    displayName: Bonds
+    description: List of bonds
+    type: array
+    items:
+      properties:
+        id:
+          displayName: Bond Id
+          description: The bond product id
+          type: string
+          example: "a02f4000007qMKvAAM"
+          required: true
+        issuer:
+          displayName: Issuer
+          description: Name of the company issuing the bond
+          type: string
+          example: "Salesforce Inc."
+          required: true
+        coupon:
+          displayName: Coupon
+          description: Coupon rate of the bond
+          type: number
+          example: 2.22
+          required: true
+        createdById:
+          displayName: Created By Id
+          description: User id that created the bond
+          type: string
+          example: "a02f4000007qMKvAAM"
+          required: false
+        creationDate:
+          displayName: Creation Date
+          description: Date which the bond record was created
+          type: string
+          example: "20/01/2028"
+          required: false
+        creditQuality:
+          displayName: Rating
+          description: Credit quality of the bond
+          type: string
+          example: AAA
+          required: true
+        faceValue:
+          displayName: Face Value
+          description: Face value of the bond
+          type: number
+          example: 1000.00
+          required: true
+        offerPrice:
+          displayName: Price
+          description: The current offer price
+          type: number
+          example: 20.00
+          required: true
+        lastModifiedById:
+          displayName: Last Modified By Id
+          description: User id that last modified the bond
+          type: string
+          example: "a02f4000007qMKvAAM"
+          required: false
+        maturityDate:
+          displayName: Maturity Date
+          description: Date which the principal is due to be paid
+          type: string
+          example: "20/01/2028"
+          required: true
+        ownerId:
+          displayName: Owner Id
+          description: User or group that owns the record
+          type: string
+          example: "a02f4000007qMKvAAM"
+          required: false
+        readyForSell:
+          displayName: Price
+          description: The current offer price
+          type: boolean
+          enum:
+            - TRUE
+            - FALSE
+          example: TRUE
+          required: true

@@ -1,0 +1,21 @@
+#%RAML 1.0
+title: Bonds App SFDC Sys
+description: This is the system api for the Bond App
+version: 1.0
+mediaType: application/json
+
+uses:
+ library: bondsAppSfdcLibrary.raml
+
+securedBy:
+  - library.clientIDreq
+
+/bonds:
+  type: library.bonds
+
+/accBonds:
+  /{id}:
+    type: library.accBonds
+
+/bondOrder:
+ type: library.bondOrder

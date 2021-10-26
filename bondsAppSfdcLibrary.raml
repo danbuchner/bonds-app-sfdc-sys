@@ -1,0 +1,43 @@
+#%RAML 1.0 Library
+usage:
+
+securitySchemes:
+  clientIDreq: !include securityScheme.raml
+    
+types:
+ Bonds: !include dataTypes/bondsResponse.raml
+ AccBonds: !include dataTypes/accBondsResponse.raml
+ BondOrder: !include dataTypes/bondOrderRequest.raml
+ BondOrderResp: !include dataTypes/bondOrderResponse.raml
+
+resourceTypes:
+ bonds:
+   get:
+     description: This will retrieve a list of bonds available for buying
+     responses:
+       200:
+         body: Bonds
+       400:
+       401:
+       500:
+
+ accBonds:
+   get:
+     description: This will retrieve a list of bonds from the client account
+     responses:
+       200:
+         body: AccBonds
+       400:
+       401:
+       500:
+
+ bondOrder:
+   post:
+     description: This endpoint will post a bond order to salesforce
+     body: BondOrder
+     responses:
+       200:
+         body: BondOrderResp
+       400:
+       401:
+       500:
